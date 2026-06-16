@@ -1,4 +1,4 @@
-# 🏆 Портфолио разработчика | Fortnite Style
+# 🏆 Портфолио разработчика | kodaneee
 
 **Live Demo:** https://kodaneee.github.io/portfolio/
 
