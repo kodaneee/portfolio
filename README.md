@@ -1,10 +1,24 @@
 # 🏆 Портфолио разработчика | Fortnite Style
 
-**Ссылка на сайт:** https://kodaneee.github.io/portfolio/
+**Live Demo:** https://kodaneee.github.io/portfolio/
 
 ## 📌 О проекте
 
 Персональная сайт-визитка с портфолио проектов, выполненных во время обучения на курсах программирования. Дизайн выполнен в стиле Fortnite с ледяной тематикой. Включает интерактивные карточки навыков с эффектом переворота, ледяного скина "Ледяная легенда" сбоку и интеграцию с треками из Suno.
+
+**Made with:** HTML, CSS, JavaScript
+
+## 🛠️ Используемые технологии
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
+
+- **HTML5** — семантическая вёрстка
+- **CSS3** — Flexbox, Grid, анимации, CSS-переменные
+- **JavaScript** — интерактивность, переворот карточек, обработка событий
+- **SVG** — графика для ледяного скина и обложек песен
 
 ## 🧩 Содержание
 
@@ -13,14 +27,6 @@
 - **Навыки** — технологии и стек: HTML5, CSS3, JavaScript, React, Python, Git
 - **Музыка** — оригинальные треки, созданные в Suno
 - **Контакты** — ссылки на GitHub, Telegram, Email, LinkedIn
-
-## 🛠️ Технологии
-
-- HTML5
-- CSS3
-- JavaScript (чистый код без фреймворков)
-- Flexbox и Grid для адаптивной вёрстки
-- SVG-графика
 
 ## 🚀 Запуск
 
