@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио kodaneee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #0b1a2f;
+            background-image: radial-gradient(circle at 20% 30%, #1a3a5c, #07101f);
+            color: #e8f0fe;
+            line-height: 1.5;
+            padding: 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            background: rgba(10, 25, 47, 0.75);
+            backdrop-filter: blur(8px);
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px #3d7bb3 inset, 0 0 0 4px #1f4b7a inset;
+            padding: 2rem 2rem 2rem 2rem;
+            border: 1px solid #5b9bd5;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== СКИН "ЛЕДЯНАЯ ЛЕГЕНДА" СБОКУ ===== */
+        .skin-side {
+            position: absolute;
+            right: -20px;
+            bottom: 0;
+            width: 220px;
+            height: 340px;
+            pointer-events: none;
+            z-index: 5;
+            opacity: 0.7;
+            filter: drop-shadow(0 0 30px #4a9eff);
+        }
+
+        .skin-side svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* ===== ФОРТНАЙТ-АКЦЕНТЫ ===== */
+        .fortnite-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #0b1a2f;
+            font-weight: 800;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px #ffd70066;
+            border: 1px solid #ffed4a;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px #4a9eff, 0 0 60px #1f6bb0;
+        }
+
+        /* ===== ПРОФИЛЬ ===== */
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(145deg, #2b7be0, #0f3d7a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #ffd700;
+            box-shadow: 0 0 0 4px #ffd700, 0 0 40px #2b7be0;
+            border: 2px solid #aad0ff;
+            flex-shrink: 0;
+            transform: rotate(-6deg);
+        }
+
+        .profile-text h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #b3d9ff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px #2b7be066;
+        }
+
+        .profile-text .subhead {
+            font-size: 1.1rem;
+            background: #1f4b7a;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #ffd700;
+            border: 1px solid #5b9bd5;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 0 20px #1f4b7a;
+        }
+
+        .profile-text p {
+            color: #b8d4f0;
+            max-width: 500px;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2.5rem;
+            margin: 1.5rem 0 2.5rem;
+            border-bottom: 2px solid #2b5f8a;
+            padding-bottom: 1.2rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #b8d4f0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a i {
+            font-size: 1.1rem;
+            color: #ffd700;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd70066;
+        }
+
+        /* ===== СЕКЦИИ ===== */
+        section {
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.8rem;
+            color: #e8f0fe;
+            text-transform: uppercase;
+            border-left: 6px solid #ffd700;
+            padding-left: 1rem;
+        }
+
+        .section-title i {
+            color: #ffd700;
+            font-size: 2rem;
+            width: 2.2rem;
+        }
+
+        /* ===== ПРОЕКТЫ ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .project-card {
+            background: rgba(15, 40, 70, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 1.8rem;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #2b5f8a;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 0 30px #2b7be066, 0 18px 40px rgba(0, 0, 0, 0.6);
+            border-color: #ffd700;
+        }
+
+        .project-icon {
+            font-size: 2.4rem;
+            color: #ffd700;
+            margin-bottom: 0.7rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #e8f0fe;
+        }
+
+        .project-card .course-tag {
+            display: inline-block;
+            background: #1f4b7a;
+            color: #ffd700;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            align-self: flex-start;
+            border: 1px solid #3d7bb3;
+        }
+
+        .project-card p {
+            color: #b8d4f0;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            flex: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .project-tech span {
+            background: #0b1a2f;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #b8d4f0;
+            border: 1px solid #2b5f8a;
+        }
+
+        /* ===== НАВЫКИ — КАРТОЧКИ С РАЗВОРОТОМ ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-flip-card {
+            background-color: transparent;
+            height: 180px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .skill-flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+            border-radius: 1.8rem;
+        }
+
+        .skill-flip-card.flipped .skill-flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .skill-card-front, .skill-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1.8rem;
+            padding: 1.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2b5f8a;
+            background: rgba(10, 30, 55, 0.85);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 20px #1f4b7a33;
+        }
+
+        .skill-card-front i {
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 0.6rem;
+            filter: drop-shadow(0 0 12px #ffd70044);
+        }
+
+        .skill-card-front .skill-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #e8f0fe;
+        }
+
+        .skill-card-front .skill-desc {
+            font-size: 0.8rem;
+            color: #8bb4e0;
+            margin-top: 0.2rem;
+        }
+
+        .skill-card-back {
+            background: #0f2a4a;
+            transform: rotateY(180deg);
+            border-color: #ffd700;
+            border-width: 2px;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .skill-card-back .back-icon {
+            font-size: 2rem;
+            color: #ffd700;
+            opacity: 0.8;
+            margin-bottom: 0.2rem;
+        }
+
+        .skill-card-back .back-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffd700;
+        }
+
+        .skill-card-back .back-detail {
+            font-size: 0.85rem;
+            color: #b8d4f0;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-top: 0.2rem;
+            border: 1px solid #2b5f8a;
+        }
+
+        /* ===== SUNO — КАРТОЧКИ ПЕСЕН С ОБЛОЖКАМИ ===== */
+        .suno-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .suno-card {
+            background: rgba(15, 40, 70, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 1.8rem;
+            padding: 1.8rem 1.5rem;
+            border: 1px solid #2b5f8a;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: #e8f0fe;
+        }
+
+        .suno-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 0 30px #2b7be066, 0 18px 40px rgba(0, 0, 0, 0.6);
+            border-color: #ffd700;
+        }
+
+        .suno-card .suno-cover {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 2px solid #2b5f8a;
+            background: #0b1a2f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+
+        .suno-card:hover .suno-cover {
+            border-color: #ffd700;
+            box-shadow: 0 0 30px #ffd70033;
+        }
+
+        .suno-card .suno-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .suno-card .suno-cover .suno-cover-placeholder {
+            font-size: 4rem;
+            color: #ffd700;
+            opacity: 0.6;
+            filter: drop-shadow(0 0 30px #ffd70044);
+        }
+
+        .suno-card .suno-icon {
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-bottom: 0.3rem;
+            filter: drop-shadow(0 0 12px #ffd70044);
+        }
+
+        .suno-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            color: #e8f0fe;
+        }
+
+        .suno-card .suno-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            color: #8bb4e0;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .suno-card .suno-meta i {
+            color: #ffd700;
+        }
+
+        .suno-card .suno-desc {
+            color: #b8d4f0;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .suno-card .suno-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1f4b7a;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #ffd700;
+            border: 1px solid #3d7bb3;
+            transition: all 0.2s;
+            align-self: flex-start;
+            text-decoration: none;
+        }
+
+        .suno-card .suno-link:hover {
+            background: #ffd700;
+            color: #0b1a2f;
+            border-color: #ffd700;
+            box-shadow: 0 0 30px #ffd70066;
+        }
+
+        .suno-card .suno-link i {
+            font-size: 0.9rem;
+        }
+
+        /* ===== КОНТАКТЫ ===== */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2.5rem;
+            background: rgba(10, 30, 55, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 1.8rem 2rem;
+            border-radius: 2rem;
+            border: 1px solid #2b5f8a;
+        }
+
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: #b8d4f0;
+            font-weight: 600;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .contact-links a i {
+            font-size: 1.4rem;
+            color: #ffd700;
+            width: 1.8rem;
+            text-align: center;
+            filter: drop-shadow(0 0 8px #ffd70044);
+        }
+
+        .contact-links a:hover {
+            color: #ffd700;
+            transform: translateY(-2px);
+            text-shadow: 0 0 20px #ffd70044;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #1f4b7a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+            color: #7aa3c9;
+            position: relative;
+            z-index: 3;
+        }
+
+        .footer i {
+            color: #ffd700;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 900px) {
+            .skin-side {
+                width: 150px;
+                height: 240px;
+                right: -10px;
+                opacity: 0.5;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0.8rem;
+            }
+            .container {
+                padding: 1.2rem;
+                border-radius: 1.8rem;
+            }
+            .profile {
+                gap: 1.2rem;
+            }
+            .profile-text h1 {
+                font-size: 1.8rem;
+            }
+            .avatar {
+                width: 80px;
+                height: 80px;
+                font-size: 2.4rem;
+            }
+            .section-title {
+                font-size: 1.4rem;
+            }
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+            .skill-flip-card {
+                height: 160px;
+            }
+            .suno-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding: 1.2rem;
+            }
+            .nav-links {
+                gap: 0.8rem 1.2rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .skin-side {
+                width: 100px;
+                height: 160px;
+                right: 0px;
+                opacity: 0.35;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .profile-text .subhead {
+                font-size: 0.9rem;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .skill-flip-card {
+                height: 150px;
+            }
+            .skin-side {
+                width: 70px;
+                height: 120px;
+                opacity: 0.25;
+            }
+        }
+        @media (max-width: 400px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== СКИН "ЛЕДЯНАЯ ЛЕГЕНДА" СБОКУ ===== -->
+    <div class="skin-side" aria-hidden="true">
+        <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="iceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#a0d0ff" />
+                    <stop offset="50%" stop-color="#3a7bd5" />
+                    <stop offset="100%" stop-color="#0f3d7a" />
+                </linearGradient>
+                <linearGradient id="iceGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#cce6ff" />
+                    <stop offset="100%" stop-color="#1f6bb0" />
+                </linearGradient>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+            </defs>
+            <rect x="60" y="80" width="80" height="120" rx="30" fill="url(#iceGrad)" stroke="#8fcbff" stroke-width="2" filter="url(#glow)" opacity="0.9"/>
+            <circle cx="100" cy="60" r="38" fill="url(#iceGlow)" stroke="#b0daff" stroke-width="2.5" filter="url(#glow)"/>
+            <rect x="80" y="50" width="40" height="18" rx="8" fill="#0b1a2f" stroke="#8fcbff" stroke-width="1.5" opacity="0.8"/>
+            <line x1="100" y1="50" x2="100" y2="68" stroke="#8fcbff" stroke-width="1.2" opacity="0.5"/>
+            <line x1="88" y1="58" x2="112" y2="58" stroke="#8fcbff" stroke-width="1.2" opacity="0.5"/>
+            <text x="100" y="46" font-size="14" fill="#ffd700" text-anchor="middle" filter="url(#glow)">❄️</text>
+            <rect x="30" y="100" width="30" height="50" rx="12" fill="url(#iceGrad)" stroke="#8fcbff" stroke-width="1.5" filter="url(#glow)" opacity="0.85"/>
+            <rect x="140" y="100" width="30" height="50" rx="12" fill="url(#iceGrad)" stroke="#8fcbff" stroke-width="1.5" filter="url(#glow)" opacity="0.85"/>
+            <rect x="65" y="200" width="28" height="60" rx="10" fill="url(#iceGrad)" stroke="#8fcbff" stroke-width="1.5" filter="url(#glow)" opacity="0.85"/>
+            <rect x="107" y="200" width="28" height="60" rx="10" fill="url(#iceGrad)" stroke="#8fcbff" stroke-width="1.5" filter="url(#glow)" opacity="0.85"/>
+            <rect x="60" y="175" width="80" height="12" rx="6" fill="#1f4b7a" stroke="#ffd700" stroke-width="1.5" filter="url(#glow)"/>
+            <circle cx="100" cy="181" r="6" fill="#ffd700" stroke="#0b1a2f" stroke-width="1"/>
+            <polygon points="170,20 178,38 162,38" fill="#8fcbff" opacity="0.6" filter="url(#glow)"/>
+            <polygon points="30,20 22,38 38,38" fill="#8fcbff" opacity="0.6" filter="url(#glow)"/>
+            <circle cx="180" cy="180" r="8" fill="#cce6ff" opacity="0.4" filter="url(#glow)"/>
+            <circle cx="20" cy="180" r="8" fill="#cce6ff" opacity="0.4" filter="url(#glow)"/>
+            <text x="100" y="280" font-size="12" fill="#ffd700" text-anchor="middle" font-weight="700" filter="url(#glow)">❄️ 2026</text>
+        </svg>
+    </div>
+
+    <!-- ===== ПРОФИЛЬ ===== -->
+    <div class="profile">
+        <div class="avatar">🏆</div>
+        <div class="profile-text">
+            <h1 class="glow-text">КД <span style="color:#ffd700;">K</span>DN</h1>
+            <div class="subhead"><i class="fas fa-code" style="margin-right: 6px;"></i> full-stack · курсы 2024</div>
+            <p style="color:#b8d4f0;">Привет! Это моё портфолио в стиле Fortnite. Проекты, которые я сделал во время обучения. <span class="fortnite-badge"><i class="fas fa-star"></i> battle pass</span></p>
+        </div>
+    </div>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <div class="nav-links">
+        <a href="#projects"><i class="fas fa-folder-open"></i> Проекты</a>
+        <a href="#skills"><i class="fas fa-cog"></i> Навыки</a>
+        <a href="#suno"><i class="fas fa-music"></i> Мои песни</a>
+        <a href="#contacts"><i class="fas fa-paper-plane"></i> Контакты</a>
+    </div>
+
+    <!-- ======== ПРОЕКТЫ ======== -->
+    <section id="projects">
+        <div class="section-title">
+            <i class="fas fa-rocket"></i> <span>Проекты с курсов</span>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                <h3>Виджет погоды</h3>
+                <span class="course-tag"><i class="far fa-calendar-alt"></i> Frontend-курс</span>
+                <p>Интерактивный виджет с API OpenWeather. Отображение температуры, ветра и иконок погоды.</p>
+                <div class="project-tech">
+                    <span>JS</span><span>CSS</span><span>Fetch API</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                <h3>Todo-менеджер</h3>
+                <span class="course-tag"><i class="fas fa-python"></i> Python-курс</span>
+                <p>Консольное приложение с сохранением задач в JSON. Добавление, удаление, фильтрация.</p>
+                <div class="project-tech">
+                    <span>Python</span><span>JSON</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                <h3>Калькулятор</h3>
+                <span class="course-tag"><i class="fab fa-js"></i> JS-курс</span>
+                <p>Классический калькулятор с историей вычислений. Поддержка клавиатуры и адаптив.</p>
+                <div class="project-tech">
+                    <span>React</span><span>CSS Grid</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-store"></i></div>
+                <h3>Магазин книг</h3>
+                <span class="course-tag"><i class="fas fa-database"></i> Fullstack-курс</span>
+                <p>Каталог книг с корзиной и фильтрацией. Данные из локального JSON, адаптивная вёрстка.</p>
+                <div class="project-tech">
+                    <span>HTML/CSS</span><span>JS</span><span>JSON</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== НАВЫКИ — КАРТОЧКИ С РАЗВОРОТОМ ======== -->
+    <section id="skills">
+        <div class="section-title">
+            <i class="fas fa-laptop-code"></i> <span>Технологии и стек</span>
+        </div>
+        <div class="skills-grid" id="skillsGrid">
+            <!-- карточки через JS -->
+        </div>
+    </section>
+
+    <!-- ======== SUNO — МОИ ПЕСНИ С ОБЛОЖКАМИ ======== -->
+    <section id="suno">
+        <div class="section-title">
+            <i class="fas fa-music"></i> <span>Мои песни (Suno)</span>
+        </div>
+        <div class="suno-grid">
+            <!-- Песня 1: zvp1Atm7HE8wXKSM -->
+            <a href="https://suno.com/s/zvp1Atm7HE8wXKSM" target="_blank" class="suno-card">
+                <div class="suno-cover">
+                    <img src="images\Пес барбос ватрушка.jpeg">
+                </div>
+                <div class="suno-icon"><i class="fas fa-headphones"></i></div>
+                <h3>П3с Б4рб0с В4трушк@</h3>
+                <div class="suno-meta">
+                    <i class="fas fa-calendar-alt"></i> 2026
+                    <span style="color:#ffd700;">✦</span>
+                    <i class="fas fa-tag"></i> Электроника
+                </div>
+                <div class="suno-desc">
+                    aggressive horror punk theatrical male vocals acoustic guitar intro fast drumming children s funny story like Punk Rock, Horror Punk russian punk accordion catchy chorus
+                </div>
+                <span class="suno-link"><i class="fas fa-play"></i> Слушать на Suno</span>
+            </a>
+
+            <!-- Песня 2: hegbEo7CylaRiWdE -->
+            <a href="https://suno.com/s/hegbEo7CylaRiWdE" target="_blank" class="suno-card">
+                <div class="suno-cover">
+                    <img src="images\MRW карман.jpeg">
+                </div>
+                <div class="suno-icon"><i class="fas fa-headphones"></i></div>
+                <h3>MRW карман</h3>
+                <div class="suno-meta">
+                    <i class="fas fa-calendar-alt"></i> 2026
+                    <span style="color:#ffd700;">✦</span>
+                    <i class="fas fa-tag"></i> Chill / Lo-fi
+                </div>
+                <div class="suno-desc">
+                    Russian meme rap, mapt0v style, slow monotone delivery, bored voice, lo-fi beat, minimalistic, no energy, short track 1:20-1:50
+                </div>
+                <span class="suno-link"><i class="fas fa-play"></i> Слушать на Suno</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ======== КОНТАКТЫ ======== -->
+    <section id="contacts">
+        <div class="section-title">
+            <i class="fas fa-address-card"></i> <span>Связаться</span>
+        </div>
+        <div class="contact-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> github.com/alexprog</a>
+            <a href="#" target="_blank"><i class="fab fa-telegram"></i> @alex_coder</a>
+            <a href="mailto:alex@example.com"><i class="fas fa-envelope"></i> alex@example.com</a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/alex-prog</a>
+        </div>
+    </section>
+
+    <!-- ===== ФУТЕР ===== -->
+    <div class="footer">
+        <span><i class="fas fa-graduation-cap"></i> 2026 · портфолио с курсов</span>
+        <span><i class="fas fa-code"></i> с любовью к программированию</span>
+    </div>
+
+</div>
+
+<script>
+    (function() {
+        // Данные для карточек навыков
+        const skillsData = [
+            { name: 'HTML5', icon: 'fab fa-html5', desc: 'Семантика, доступность', backDetail: 'Валидная вёрстка, SEO' },
+            { name: 'CSS3', icon: 'fab fa-css3-alt', desc: 'Flex / Grid, анимации', backDetail: 'Адаптив, переменные' },
+            { name: 'JavaScript', icon: 'fab fa-js', desc: 'ES6+, DOM, Fetch', backDetail: 'Асинхронность, замыкания' },
+            { name: 'React', icon: 'fab fa-react', desc: 'Хуки, компоненты', backDetail: 'Redux Toolkit (база)' },
+            { name: 'Python', icon: 'fab fa-python', desc: 'Flask, Django (основы)', backDetail: 'REST API, декораторы' },
+            { name: 'Git', icon: 'fab fa-git-alt', desc: 'GitHub, ветвление', backDetail: 'PR, rebase, workflow' },
+        ];
+
+        const grid = document.getElementById('skillsGrid');
+        if (!grid) return;
+
+        function rebuildCards() {
+            grid.innerHTML = '';
+            const isDesktop = window.innerWidth > 768;
+
+            skillsData.forEach((skill) => {
+                const card = document.createElement('div');
+                card.className = 'skill-flip-card';
+
+                const inner = document.createElement('div');
+                inner.className = 'skill-flip-card-inner';
+
+                const front = document.createElement('div');
+                front.className = 'skill-card-front';
+                front.innerHTML = `
+                    <i class="${skill.icon}"></i>
+                    <div class="skill-name">${skill.name}</div>
+                    <div class="skill-desc">${skill.desc}</div>
+                `;
+
+                const back = document.createElement('div');
+                back.className = 'skill-card-back';
+                back.innerHTML = `
+                    <div class="back-icon"><i class="fas fa-rotate-right"></i></div>
+                    <div class="back-title">${skill.name}</div>
+                    <div class="back-detail">${skill.backDetail}</div>
+                `;
+
+                inner.appendChild(front);
+                inner.appendChild(back);
+                card.appendChild(inner);
+
+                // Hover всегда
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('flipped');
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('flipped');
+                });
+
+                // Клик: только на мобильных
+                if (!isDesktop) {
+                    card.addEventListener('click', function(e) {
+                        this.classList.toggle('flipped');
+                    });
+                }
+
+                grid.appendChild(card);
+            });
+        }
+
+        rebuildCards();
+
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                rebuildCards();
+            }, 200);
+        });
+
+    })();
+</script>
+
+</body>
+</html>
