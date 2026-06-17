@@ -687,7 +687,7 @@
 
     <!-- ===== ПРОФИЛЬ ===== -->
     <div class="profile">
-        <div class="avatar">🏆</div>
+        <div class="avatar"><img src="images\avatar.jpg"></div>
         <div class="profile-text">
             <h1 class="glow-text">КД <span style="color:#ffd700;">K</span>DN</h1>
             <div class="subhead"><i class="fas fa-code" style="margin-right: 6px;"></i> full-stack · курсы 2024</div>
@@ -710,39 +710,30 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
-                <h3>Виджет погоды</h3>
-                <span class="course-tag"><i class="far fa-calendar-alt"></i> Frontend-курс</span>
-                <p>Интерактивный виджет с API OpenWeather. Отображение температуры, ветра и иконок погоды.</p>
+                <div class="project-icon"><i class="fas fa-cash-register"></i></div>
+                <h3>Касса самообслуживания</h3>
+                <span class="course-tag"><i class="fab fa-python"></i> Python-курс</span>
+                <p>Консольное приложение для кассы: регистрация и вход в аккаунт, каталог товаров, поиск по штрих-коду, добавление товаров в корзину(и их удаление), использование промокодов и баллов за покупки, создание чека и сохранение истории покупок в SQLite</p>
                 <div class="project-tech">
-                    <span>JS</span><span>CSS</span><span>Fetch API</span>
+                    <span>Python</span><span>SQLite</span>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-icon"><i class="fas fa-tasks"></i></div>
-                <h3>Todo-менеджер</h3>
-                <span class="course-tag"><i class="fas fa-python"></i> Python-курс</span>
-                <p>Консольное приложение с сохранением задач в JSON. Добавление, удаление, фильтрация.</p>
+                <div class="project-icon"><i class="fas fa-keyboard"></i></div>
+                <h3>Магазин компьютерной переферии(не полная версия)</h3>
+                <span class="course-tag"><i class="fab fa-python"></i> Django-курс</span>
+                <p>Веб-приложение Интернет-магазин периферии: система авторизации пользователей, фильтрация товаров по категориям, при клике на товар отображаются похожие модели из той же категории. Все данные хранятся в SQLite.</p>
                 <div class="project-tech">
-                    <span>Python</span><span>JSON</span>
+                    <span>Python</span><span>SQLite</span><span>HTML/CSS</span>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-icon"><i class="fas fa-calculator"></i></div>
-                <h3>Калькулятор</h3>
-                <span class="course-tag"><i class="fab fa-js"></i> JS-курс</span>
-                <p>Классический калькулятор с историей вычислений. Поддержка клавиатуры и адаптив.</p>
+                <div class="project-icon"><i class="fas fa-pizza-slice"></i></div>
+                <h3>Заказ пиццы(мини-проект)</h3>
+                <span class="course-tag"><i class="fab fa-python"></i> Django-курс</span>
+                <p>Веб-приложение для заказа пиццы: меню, симуляция приготовления с таймером 5 минут и различные мини-игры на выбор на время ожидания.</p></p>
                 <div class="project-tech">
-                    <span>React</span><span>CSS Grid</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-store"></i></div>
-                <h3>Магазин книг</h3>
-                <span class="course-tag"><i class="fas fa-database"></i> Fullstack-курс</span>
-                <p>Каталог книг с корзиной и фильтрацией. Данные из локального JSON, адаптивная вёрстка.</p>
-                <div class="project-tech">
-                    <span>HTML/CSS</span><span>JS</span><span>JSON</span>
+                    <span>Python</span><span>SQLite</span><span>HTML/CSS</span>
                 </div>
             </div>
         </div>
@@ -808,10 +799,9 @@
             <i class="fas fa-address-card"></i> <span>Связаться</span>
         </div>
         <div class="contact-links">
-            <a href="#" target="_blank"><i class="fab fa-github"></i> github.com/alexprog</a>
-            <a href="#" target="_blank"><i class="fab fa-telegram"></i> @alex_coder</a>
-            <a href="mailto:alex@example.com"><i class="fas fa-envelope"></i> alex@example.com</a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/alex-prog</a>
+            <a href="https://github.com/kodaneee" target="_blank"><i class="fab fa-github"></i> github.com/kodaneee</a>
+            <a href="https://t.me/kodaneee" target="_blank"><i class="fab fa-telegram"></i> @kodaneee</a>
+            <a href="mailto:dsmbkrc@gmail.com"><i class="fas fa-envelope"></i> dsmbkrc@gmail.com</a>
         </div>
     </section>
 
@@ -827,12 +817,12 @@
     (function() {
         // Данные для карточек навыков
         const skillsData = [
-            { name: 'HTML5', icon: 'fab fa-html5', desc: 'Семантика, доступность', backDetail: 'Валидная вёрстка, SEO' },
-            { name: 'CSS3', icon: 'fab fa-css3-alt', desc: 'Flex / Grid, анимации', backDetail: 'Адаптив, переменные' },
-            { name: 'JavaScript', icon: 'fab fa-js', desc: 'ES6+, DOM, Fetch', backDetail: 'Асинхронность, замыкания' },
-            { name: 'React', icon: 'fab fa-react', desc: 'Хуки, компоненты', backDetail: 'Redux Toolkit (база)' },
-            { name: 'Python', icon: 'fab fa-python', desc: 'Flask, Django (основы)', backDetail: 'REST API, декораторы' },
-            { name: 'Git', icon: 'fab fa-git-alt', desc: 'GitHub, ветвление', backDetail: 'PR, rebase, workflow' },
+            { name: 'HTML5', icon: 'fab fa-html5', desc: 'Структура страниц', backDetail: 'Семантика, доступность' },
+            { name: 'CSS3', icon: 'fab fa-css3-alt', desc: 'Стилизация', backDetail: 'Flex/Grid, адаптив' },
+            { name: 'Python', icon: 'fab fa-python', desc: 'Основной язык', backDetail: 'Консольные приложения, бэкенд' },
+            { name: 'Django', icon: 'fab fa-python', desc: 'Веб-фреймворк', backDetail: 'MVT, ORM, авторизация' },
+            { name: 'SQLite', icon: 'fab fa-database', desc: 'База данных', backDetail: 'SQL, CRUD, транзакции' },
+            { name: 'Git', icon: 'fab fa-git-alt', desc: 'Контроль версий', backDetail: 'GitHub, ветвление, PR' },
         ];
 
         const grid = document.getElementById('skillsGrid');
