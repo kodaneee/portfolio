@@ -201,9 +201,20 @@
 
         /* ===== ПРОЕКТЫ ===== */
         .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            align-items: stretch;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card p {
+            flex: 1;
         }
 
         @media (max-width: 900px) {
@@ -211,7 +222,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 600px) {
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -761,6 +772,51 @@
                     <span>Python</span><span>SQLite</span><span>HTML/CSS</span>
                 </div>
             </div>
+            <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fab fa-telegram"></i></div>
+                    <h3>Telegram-бот: Таймер + Fortnite PR</h3>
+                    <span class="course-tag"><i class="fab fa-python"></i> Python-проект</span>
+                    <p>Бот с таймерами, часами, датой и поиском PR в Fortnite Tracker. Написан на Python с библиотекой Aiogram.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Aiogram</span><span>API</span>
+                    </div>
+                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <a href="https://web.telegram.org/a/#8847786974" target="_blank" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            background: #0088cc;
+                            color: white;
+                            padding: 0.4rem 1.2rem;
+                            border-radius: 40px;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            text-decoration: none;
+                            transition: all 0.2s;
+                            border: 1px solid #0088cc;
+                        ">
+                            <i class="fab fa-telegram"></i> Бот в Telegram
+                        </a>
+                        <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            background: #1f4b7a;
+                            color: #ffd700;
+                            padding: 0.4rem 1.2rem;
+                            border-radius: 40px;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            text-decoration: none;
+                            transition: all 0.2s;
+                            border: 1px solid #3d7bb3;
+                        ">
+                            <i class="fab fa-github"></i> Код
+                        </a>
+                    </div>
+                </div>
+            </a>
             <a href="https://kodaneee.github.io/gameJS/" target="_blank" style="text-decoration: none; color: inherit; display: block;">
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-car"></i></div>
@@ -769,17 +825,6 @@
                     <p>Гоночная игра с управлением газом и тормозом, динамикой скорости и оборотов. Соревнуйся с временем!</p>
                     <div class="project-tech">
                         <span>JavaScript</span><span>HTML/CSS</span><span>AI</span>
-                    </div>
-                </div>
-            </a>
-            <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="project-card">
-                    <div class="project-icon"><i class="fab fa-telegram"></i></div>
-                    <h3>Telegram-бот: Таймер + Fortnite PR</h3>
-                    <span class="course-tag"><i class="fab fa-python"></i> Python-проект</span>
-                    <p>Бот с таймерами, часами, датой и поиском PR в Fortnite Tracker. Написан на Python с библиотекой Aiogram.</p>
-                    <div class="project-tech">
-                        <span>Python</span><span>Aiogram</span><span>API</span><span>AI</span>
                     </div>
                 </div>
             </a>
