@@ -207,10 +207,23 @@
             align-items: stretch;
         }
 
+        .projects-grid a {
+            max-width: 100%;
+            min-width: 0;
+        }
+
         .project-card {
             display: flex;
             flex-direction: column;
             height: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .project-card .buttons-container {
+            max-width: 100%;
+            flex-wrap: wrap;
         }
 
         .project-card p {
@@ -778,33 +791,44 @@
                     <span>Python</span><span>SQLite</span><span>HTML/CSS</span>
                 </div>
             </div>
-            <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="text-decoration: none; color: inherit; display: block;">
+            <a href="https://kodaneee.github.io/gameJS/" target="_blank" style="text-decoration: none; color: inherit; display: block;">
                 <div class="project-card">
-                    <div class="project-icon"><i class="fab fa-telegram"></i></div>
-                    <h3>Telegram-бот: Таймер + Fortnite PR</h3>
-                    <span class="course-tag"><i class="fab fa-python"></i> Python-проект</span>
-                    <p>Бот с таймерами, часами, датой и поиском PR в Fortnite Tracker. Написан на Python с библиотекой Aiogram.</p>
+                    <div class="project-icon"><i class="fas fa-car"></i></div>
+                    <h3>Drag Racing: Streets</h3>
+                    <span class="course-tag"><i class="fab fa-js"></i> JS-игра</span>
+                    <p>Гоночная игра с управлением газом и тормозом, динамикой скорости и оборотов. Соревнуйся с временем!</p>
                     <div class="project-tech">
-                        <span>Python</span><span>Aiogram</span><span>API</span>
+                        <span>JavaScript</span><span>HTML/CSS</span><span>AI</span>
                     </div>
-                    <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <a href="https://web.telegram.org/a/#8847786974" target="_blank" style="
-                            display: inline-flex;
-                            align-items: center;
-                            gap: 0.5rem;
-                            background: #0088cc;
-                            color: white;
-                            padding: 0.4rem 1.2rem;
-                            border-radius: 40px;
-                            font-weight: 600;
-                            font-size: 0.8rem;
-                            text-decoration: none;
-                            transition: all 0.2s;
-                            border: 1px solid #0088cc;
-                        ">
-                            <i class="fab fa-telegram"></i> Бот в Telegram
-                        </a>
-                        <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="
+                </div>
+            </a>
+            <div class="project-card" style="max-width: 100%; box-sizing: border-box; overflow: hidden;">
+                <div class="project-icon"><i class="fab fa-telegram"></i></div>
+                <h3>Telegram-бот: Таймер + Fortnite PR</h3>
+                <span class="course-tag"><i class="fab fa-python"></i> Python-проект</span>
+                <p>Бот с таймерами, часами, датой и поиском PR в Fortnite Tracker. Написан на Python с библиотекой Aiogram.</p>
+                <div class="project-tech">
+                    <span>Python</span><span>Aiogram</span><span>API</span>
+                </div>
+                <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; max-width: 100%;">
+                    <a href="https://web.telegram.org/a/#8847786974" target="_blank" style="
+                           display: inline-flex;
+                           align-items: center;
+                           gap: 0.5rem;
+                           background: #0088cc;
+                           color: white;
+                           padding: 0.4rem 1.2rem;
+                           border-radius: 40px;
+                           font-weight: 600;
+                           font-size: 0.8rem;
+                           text-decoration: none;
+                           transition: all 0.2s;
+                           border: 1px solid #0088cc;
+                           white-space: nowrap;
+                       ">
+                        <i class="fab fa-telegram"></i> Бот в Telegram
+                    </a>
+                    <a href="https://github.com/kodaneee/tg-bot" target="_blank" style="
                             display: inline-flex;
                             align-items: center;
                             gap: 0.5rem;
@@ -817,23 +841,12 @@
                             text-decoration: none;
                             transition: all 0.2s;
                             border: 1px solid #3d7bb3;
-                        ">
-                            <i class="fab fa-github"></i> Код
-                        </a>
-                    </div>
+                            white-space: nowrap;
+                       ">
+                        <i class="fab fa-github"></i> Код
+                    </a>
                 </div>
-            </a>
-            <a href="https://kodaneee.github.io/gameJS/" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-car"></i></div>
-                    <h3>Drag Racing: Streets</h3>
-                    <span class="course-tag"><i class="fab fa-js"></i> JS-игра</span>
-                    <p>Гоночная игра с управлением газом и тормозом, динамикой скорости и оборотов. Соревнуйся с временем!</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span><span>HTML/CSS</span><span>AI</span>
-                    </div>
-                </div>
-            </a>
+            </div>
         </div>
     </section>
 
